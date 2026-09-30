@@ -204,12 +204,10 @@ ${extractedText}
 // Start server
 // -----------------------------
 
-const PORT = process.env.PORT || 5000;
-
-if (process.env.NODE_ENV !== "production") {
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-}
-
-export default app;
+const response = await axios.post(
+  "/api/analyze",
+  formData,
+  {
+    timeout: 120000,
+  }
+);
