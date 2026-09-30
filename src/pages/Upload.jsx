@@ -340,7 +340,7 @@ export default function Upload() {
       // ==================================================
 
       const response = await axios.post(
-        "http://localhost:5000/api/analyze",
+        "/api/analyze",
         formData,
         {
           timeout: 120000,
